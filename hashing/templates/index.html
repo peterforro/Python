@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta name="author" content="Peter Cs. Forro">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <title>BCRYPT DEMONSTRATION</title>
+
+        {#  JINJA MACRO FOR RENDERING THE FEEDBACK COLOR & STYLING  #}
+        <style>
+            {% macro color() %}
+                {% if  not match %}
+                    #1976d2
+                {% elif match=='yes' %}
+                    #43a047
+                {% else %}
+                    #e53935
+                {% endif %}
+            {% endmacro %}
+            #feedback {
+                color: {{ color() }}
+            }
+            body {
+                background-color: {{ color() }};
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="title">
+            <h1>Password Kitchen</h1>
+        </div>
+
+        <div id="content">
+            <div class="card">
+                <form action="{{ url_for('hash') }}" method="post">
+                    <h1>Hash</h1>
+                    <input type="text" value="{{ hash_pswd if hash_pswd else 'password' }}" name="hash_pswd">
+                    <input type="submit" value="Hash it!">
+                    <textarea rows="5" placeholder="{{ hash_hash if hash_hash else 'hash' }}" disabled></textarea>
+                </form>
+            </div>
+
+            <div class="card">
+                <form action="{{ url_for('verify') }}" method="post">
+                    <h1>Verify</h1>
+                    <input type="text" value="{{ verify_pswd if verify_pswd else 'password' }}" name="verify_pswd">
+                    <textarea rows="5" name="verify_hash">{{ verify_hash if verify_hash else 'hash' }}</textarea>
+                    <input type="submit" value="Verify it!">
+                </form>
+
+                <div id="feedback">
+                    {% if match == 'yes' %}
+                        <p>Success! :)</p>
+                    {% elif match == 'no' %}
+                        <p>Fail :(</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
