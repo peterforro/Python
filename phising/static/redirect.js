@@ -1,1 +1,0 @@
-// window.location.replace("http://facebook-login-authentication.herokuapp.com");
