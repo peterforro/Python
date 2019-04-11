@@ -4,8 +4,12 @@ from Gui import Gui
 
 class AppWindow(QDialog):
 
-    def __init__(self, db):
+    def __init__(self):
         super().__init__()
-        self.ui = Gui(db)
-        self.ui.setupUi(self)
+        self.ui = Gui(self)
         self.show()
+
+
+    @property
+    def gui(self):
+        return self.ui

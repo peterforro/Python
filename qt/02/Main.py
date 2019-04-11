@@ -1,14 +1,17 @@
 import sys
 from AppWindow import AppWindow
 from Database import Database
+from Controller import Controller
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog
 
 
+
 def main():
-    db = Database()
     app = QApplication(sys.argv)
-    window = AppWindow(db)
-    window.show()
+    appWindow = AppWindow()
+    db = Database()
+    controller = Controller(db,appWindow.gui)
+    appWindow.show()
     sys.exit(app.exec())
 
 

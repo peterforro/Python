@@ -1,30 +1,38 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+# -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file 'gui.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Gui(object):
 
-
-    def __init__(self, db):
-        self.__db = db
-
-
-    def setupUi(self, Dialog):
+    def __init__(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(531, 388)
+        Dialog.resize(727, 426)
         self.tabWidget = QtWidgets.QTabWidget(Dialog)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 531, 401))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 701, 401))
         self.tabWidget.setObjectName("tabWidget")
         self.records = QtWidgets.QWidget()
         self.records.setObjectName("records")
-        self.textBrowser = QtWidgets.QTextBrowser(self.records)
-        self.textBrowser.setGeometry(QtCore.QRect(0, 0, 531, 361))
+        self.gridLayoutWidget = QtWidgets.QWidget(self.records)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(-1, -1, 701, 371))
+        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.textBrowser = QtWidgets.QTextBrowser(self.gridLayoutWidget)
         self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout.addWidget(self.textBrowser, 0, 0, 1, 1)
         self.tabWidget.addTab(self.records, "")
         self.new_record = QtWidgets.QWidget()
         self.new_record.setObjectName("new_record")
         self.formLayoutWidget = QtWidgets.QWidget(self.new_record)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(150, 60, 271, 175))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(230, 70, 271, 175))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
@@ -47,62 +55,30 @@ class Gui(object):
         self.eMailLabel = QtWidgets.QLabel(self.formLayoutWidget)
         self.eMailLabel.setObjectName("eMailLabel")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.eMailLabel)
-        self.email_filed = QtWidgets.QLineEdit(self.formLayoutWidget)
-        self.email_filed.setObjectName("email_filed")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.email_filed)
+        self.email_field = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.email_field.setObjectName("email_field")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.email_field)
         self.add_button = QtWidgets.QPushButton(self.formLayoutWidget)
         self.add_button.setObjectName("add_button")
-        self.add_button.clicked.connect(self.insert)
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.SpanningRole, self.add_button)
-        self.name_filed = QtWidgets.QLineEdit(self.formLayoutWidget)
-        self.name_filed.setObjectName("name_filed")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.name_filed)
+        self.name_field = QtWidgets.QLineEdit(self.formLayoutWidget)
+        self.name_field.setObjectName("name_field")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.name_field)
         self.tabWidget.addTab(self.new_record, "")
+
         self.retranslateUi(Dialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
-        self.get_records()
-
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Telephon book by Peter Cs. Forro"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.records), _translate("Dialog", "Records"))
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.records), _translate("Dialog", "Tab 1"))
         self.nameLabel.setText(_translate("Dialog", "Name"))
         self.birthLabel.setText(_translate("Dialog", "Birth"))
         self.phoneLabel.setText(_translate("Dialog", "Phone"))
         self.eMailLabel.setText(_translate("Dialog", "E-mail"))
         self.add_button.setText(_translate("Dialog", "Add to records!"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.new_record), _translate("Dialog", "Add record"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.new_record), _translate("Dialog", "Tab 2"))
 
 
-
-    def get_records(self):
-        records = self.__db.get_records()
-        records.sort(key=lambda record:record['name'])
-        string = ''
-        for record in records:
-            string += ', '.join([record['name'],str(record['birth']),record['phone'],record['email']]) + '\n'
-        self.textBrowser.setText(string)
-
-
-
-    def clear_form(self):
-        self.name_filed.clear()
-        self.phone_field.clear()
-        self.email_filed.clear()
-        self.birth_field.clear()
-
-
-
-    def insert(self):
-        user_input = {
-            'name' : self.name_filed.text(),
-            'birth' : self.birth_field.dateTime().toPyDateTime(),
-            'email' : self.email_filed.text(),
-            'phone' : self.phone_field.text()
-        }
-        self.__db.insert(user_input)
-        print('Record has been added!')
-        self.clear_form()
-        self.get_records()
