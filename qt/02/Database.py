@@ -3,12 +3,14 @@ import psycopg2, psycopg2.extras
 import urllib
 
 
+
 class Database:
 
+
     def __init__(self):
-        self.__user_name = os.environ.get('PSQL_USER')
-        self.__password = os.environ.get('PSQL_PASSWORD')
-        self.__database_name = os.environ.get('PSQL_DB')
+        self.__user_name = 'peterforro'#os.environ.get('PSQL_USER')
+        self.__password = 'ifur6iwillb9!'#os.environ.get('PSQL_PASSWORD')
+        self.__database_name = 'telephonebook'#os.environ.get('PSQL_DB')
         self.__connection_str = f'postgresql://{self.__user_name}:{self.__password}@localhost/{self.__database_name}'
 
 
@@ -50,9 +52,19 @@ class Database:
     def get_records(self):
         connection = self.connect()
         cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        query = ''' SELECT * FROM records'''
+        query = ''' SELECT name,birth,phone,email FROM records;  '''
         cursor.execute(query)
         result = cursor.fetchall()
         cursor.close()
         connection.close()
         return result
+
+
+
+    def delete_records(self):
+        connection = self.connect()
+        cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        query = ''' DELETE FROM records;    '''
+        cursor.execute(query)
+        cursor.close()
+        connection.close()

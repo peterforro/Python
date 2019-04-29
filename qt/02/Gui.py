@@ -1,18 +1,11 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'gui.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.1
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Gui(object):
 
+
     def __init__(self, Dialog):
-        Dialog.setObjectName("Dialog")
+        Dialog.setObjectName("dialog")
         Dialog.resize(727, 426)
         self.tabWidget = QtWidgets.QTabWidget(Dialog)
         self.tabWidget.setGeometry(QtCore.QRect(10, 10, 701, 401))
@@ -65,20 +58,29 @@ class Gui(object):
         self.name_field.setObjectName("name_field")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.name_field)
         self.tabWidget.addTab(self.new_record, "")
-
+        self.options = QtWidgets.QWidget()
+        self.options.setObjectName("options")
+        self.clear_button = QtWidgets.QPushButton(self.options)
+        self.clear_button.setGeometry(QtCore.QRect(230, 110, 231, 101))
+        self.clear_button.setObjectName("clear_button")
+        self.tabWidget.addTab(self.options, "")
         self.retranslateUi(Dialog)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.records), _translate("Dialog", "Tab 1"))
+        Dialog.setWindowTitle(_translate("Dialog", "Telephonebook by Peter Cs. Forro"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.records), _translate("Dialog", "Records"))
         self.nameLabel.setText(_translate("Dialog", "Name"))
         self.birthLabel.setText(_translate("Dialog", "Birth"))
         self.phoneLabel.setText(_translate("Dialog", "Phone"))
         self.eMailLabel.setText(_translate("Dialog", "E-mail"))
         self.add_button.setText(_translate("Dialog", "Add to records!"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.new_record), _translate("Dialog", "Tab 2"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.new_record), _translate("Dialog", "New record"))
+        self.clear_button.setText(_translate("Dialog", "Clear Database"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.options), _translate("Dialog", "Options"))
 
 

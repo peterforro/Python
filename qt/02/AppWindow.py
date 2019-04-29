@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QDialog
-from Gui import Gui
+from Gui2 import Gui
 
 
 class AppWindow(QDialog):
