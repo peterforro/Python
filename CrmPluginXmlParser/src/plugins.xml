@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="ContractRelatedPlugins.Plugins.dll" Id="f2863564-63fd-e411-bbea-00155d098e01" IsolationMode="None" SourceType="Database">
+      <PluginTypes>
+        <Plugin Description="Plug-in to PreCCInvoicePlanCreate And Update" FriendlyName="PreCCInvoicePlanCreateAndUpdate" Name="ContractRelatedPlugins.Plugins.PreCCInvoicePlanCreateAndUpdate" Id="a4fe4cb3-63fd-e411-bbea-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCInvoicePlanCreateAndUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanCreate" Description="Pre-Operation of CC Invoice Plan Create" Id="a5fe4cb3-63fd-e411-bbea-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="2" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanUpdate" Description="Pre-Operation of CC Invoice Plan Update" FilteringAttributes="new_axarticlemodifiedmanually,new_billingproduct,new_suid,new_said,new_feeincluded,new_feetype,new_axarticle,new_clientreferencepq,new_excludeperiodfromtext,new_invoiceremark1,new_invoiceremark2,new_invoiceremarkplacement_2,new_invoiceremarkplacement_1,new_suid,new_beaccountingcompany,new_invoiceopponent" Id="43bc726d-6afd-e411-bbea-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="2" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_invoicingenddate,new_axarticlemodifiedmanually,new_billingproduct,new_serviceclientfromsa,new_suid,new_said,new_feeincluded,new_feetype,new_axarticle,new_clientreferencepq,new_excludeperiodfromtext,new_invoiceremark1,new_invoiceremark2,new_invoiceremarkplacement_1,new_invoiceremarkplacement_2,new_suid,new_said,new_beaccountingcompany,new_invoiceopponent" EntityAlias="PreImage" Id="4b107ec7-33fe-e411-bbea-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCILJobUpdate" FriendlyName="PreCCILJobUpdate" Name="ContractRelatedPlugins.Plugins.PreCCILJobUpdate" Id="cd8f26e9-6313-e511-bbea-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCILJobUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCILJobUpdate" Description="Pre-Operation of CC IL Job Update" FilteringAttributes="new_iljobstatus" Id="ce8f26e9-6313-e511-bbea-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_cciljob" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="8dff9188-6413-e511-bbea-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCIVJobUpdate" FriendlyName="PreCCIVJobUpdate" Name="ContractRelatedPlugins.Plugins.PreCCIVJobUpdate" Id="aaabaf66-aa15-e511-90f6-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCIVJobUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCIVJobUpdate" Description="Pre-Operation of CC IV Job Update" Id="ababaf66-aa15-e511-90f6-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccivjob" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="aeabaf66-aa15-e511-90f6-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCAILJobUpdate" FriendlyName="PreCCAILJobUpdate" Name="ContractRelatedPlugins.Plugins.PreCCAILJobUpdate" Id="07e9dbbb-eb18-e511-90f6-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCAILJobUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCAILJobUpdate" Description="Pre-Operation of CC AIL Job Update" Id="08e9dbbb-eb18-e511-90f6-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccailjob" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="0be9dbbb-eb18-e511-90f6-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostCCServiceAgreementUpdate" FriendlyName="PostCCServiceAgreementUpdate" Name="ContractRelatedPlugins.Plugins.PostCCServiceAgreementUpdate" Id="b8c05435-4f5c-e511-8a5d-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PostCCServiceAgreementUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostCCServiceAgreementUpdate" Description="Post-Operation of CC Service Agreement Update" FilteringAttributes="new_serviceclient,new_serviceagreementurltxt" Id="b9c05435-4f5c-e511-8a5d-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccserviceagreement" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_serviceclient,new_serviceagreementurltxt" EntityAlias="PreImage" Id="bcc05435-4f5c-e511-8a5d-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+                <Image Attributes="new_serviceclient,new_serviceagreementurltxt" EntityAlias="PostImage" Id="bdc05435-4f5c-e511-8a5d-00155d098e01" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreEstimatedInvoiceLineCreate" FriendlyName="PreEstimatedInvoiceLineCreate" Name="ContractRelatedPlugins.Plugins.PreEstimatedInvoiceLineCreate" Id="49ce65a5-16a0-e511-84aa-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreEstimatedInvoiceLineCreate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreEstimatedInvoiceLineCreate" Description="Pre-Operation of Estimated Invoice Line Create" Id="4ace65a5-16a0-e511-84aa-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceline" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCInvoicePlanUpdateInvoiceOpponent" FriendlyName="PreCCInvoicePlanUpdateInvoiceOpponent" Name="ContractRelatedPlugins.Plugins.PreCCInvoicePlanUpdateInvoiceOpponent" Id="87d40813-2ea0-e511-84aa-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCInvoicePlanUpdateInvoiceOpponent">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanUpdateInvoiceOpponent" Description="Pre-Operation of CC Invoice Plan Update Invoice Opponent" FilteringAttributes="new_invoiceopponent" Id="88d40813-2ea0-e511-84aa-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_invoiceopponent" EntityAlias="PreImage" Id="8bd40813-2ea0-e511-84aa-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCServiceUnitCreate" FriendlyName="PreCCServiceUnitCreate" Name="ContractRelatedPlugins.Plugins.PreCCServiceUnitCreate" Id="9646e9c2-e3bd-e511-9a44-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCServiceUnitCreate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCServiceUnitCreate" Description="Pre-Operation of CC Service Unit Create" Id="9746e9c2-e3bd-e511-9a44-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostCCInvoicePriceandQuantityOrFeeActualUpdateInIP" FriendlyName="PostCCInvoicePriceandQuantityOrFeeActualUpdateInIP" Name="ContractRelatedPlugins.Plugins.PostCCInvoicePriceandQuantityOrFeeActualUpdateInIP" Id="49682956-4ac3-e511-9a44-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PostCCInvoicePriceandQuantityOrFeeActualUpdateInIP">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostCCIPUpdate" Description="Post-Operation of CC Invoice Price Update" FilteringAttributes="new_feeincluded,new_feetype,new_paymentterms" Id="1289eb1b-334f-e611-8470-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_feeincluded,new_feetype,new_paymentterms" EntityAlias="PreImage" Id="0f767892-1887-e611-902d-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCInvoicePriceandQuantityActualUpdateInIPUpdate" Description="Post-Operation of CC Invoice Price and Quantity Update" FilteringAttributes="new_price,new_currency,new_unit,new_quantity,new_priceinterval,new_date,new_ipid,statecode" Id="4a682956-4ac3-e511-9a44-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoicepriceandquantity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_ipid" EntityAlias="PostImage" Id="4e682956-4ac3-e511-9a44-00155d098e01" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCInvoicePriceandQuantityActualUpdateInIPCreate" Description="Post-Operation of CC Invoice Price and Quantity Create" Id="4f682956-4ac3-e511-9a44-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoicepriceandquantity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_ipid" EntityAlias="PostImage" Id="52682956-4ac3-e511-9a44-00155d098e01" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCInvoicePriceandQuantityActualUpdateInIPDelete" Description="Post-Operation of CC Invoice Price and Quantity Delete" Id="53682956-4ac3-e511-9a44-00155d098e01" MessageName="Delete" Mode="Synchronous" PrimaryEntityName="new_ccinvoicepriceandquantity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_ipid" EntityAlias="PreImage" Id="56682956-4ac3-e511-9a44-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCFeeActualUpdateInIPUpdate" Description="Post-Operation of CC Fee duration and Price Update" FilteringAttributes="new_price,new_currency,new_unit,new_validfrom,new_fee,statecode" Id="b1f46b19-f04c-e611-8953-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_feedurationandprice" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_fee" EntityAlias="PreImage" Id="16b37ec1-f04c-e611-8953-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+                <Image Attributes="new_fee" EntityAlias="PostImage" Id="b4f46b19-f04c-e611-8953-00155d098e01" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCFeeActualUpdateInIPCreate" Description="Post-Operation of CC Fee duration and Price Create" Id="b5f46b19-f04c-e611-8953-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_feedurationandprice" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_fee" EntityAlias="PostImage" Id="b8f46b19-f04c-e611-8953-00155d098e01" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCFeeActualUpdateInIPDelete" Description="Post-Operation of CC Fee duration and Price Delete" Id="b9f46b19-f04c-e611-8953-00155d098e01" MessageName="Delete" Mode="Synchronous" PrimaryEntityName="new_feedurationandprice" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_fee" EntityAlias="PreImage" Id="bcf46b19-f04c-e611-8953-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostOpportunityWonCreateWaitingContract" FriendlyName="PostOpportunityWonCreateWaitingContract" Name="ContractRelatedPlugins.Plugins.PostOpportunityWonCreateWaitingContract" Id="858f1689-a9c5-e511-aec0-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PostOpportunityWonCreateWaitingContract">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostOpportunityWonCreateWaitingContract" Description="Post-Won Operation of Opportunity PostOpportunity Create Waiting Contract" FilteringAttributes="statecode" Id="868f1689-a9c5-e511-aec0-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="opportunity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="statecode" EntityAlias="PreImage" Id="898f1689-a9c5-e511-aec0-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+                <Image Attributes="opportunityid,actualclosedate,ownerid,customerid,statecode,modifiedby" EntityAlias="PostImage" Id="8a8f1689-a9c5-e511-aec0-00155d098e01" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCWaitingContractUpdate" FriendlyName="PreCCWaitingContractUpdate" Name="ContractRelatedPlugins.Plugins.PreCCWaitingContractUpdate" Id="062330d3-2fcf-e511-aec0-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCWaitingContractUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCWaitingContractUpdate" Description="Pre-Operation of CC Waiting Contract Update" FilteringAttributes="new_contractstatus" Id="072330d3-2fcf-e511-aec0-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccwaitinglist" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_service,new_mifidapproved,new_market,new_actualclosedate,new_assignedsu,new_beservicecompany,new_comments,new_contractdate,new_contractstatus,new_customername,new_durationtype,new_expirydate,new_lockindate,new_masteragreement,new_name,new_noticeperiod,new_opportunity,new_originwaitinglist,new_estimatedrevenue,transactioncurrencyid,new_serviceagreement,new_serviceoffering,new_servicetype,new_startdate" EntityAlias="PreImage" Id="0a2330d3-2fcf-e511-aec0-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCActualInvoiceLineCreateAndUpdate" FriendlyName="PreCCActualInvoiceLineCreateAndUpdate" Name="ContractRelatedPlugins.Plugins.PreCCActualInvoiceLineCreateAndUpdate" Id="bd0abe0f-7ad9-e511-a03b-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCActualInvoiceLineCreateAndUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCActualInvoiceLineCreate" Description="Pre-Operation of CC Actual Invoice Line Create" Id="3bc9e180-7ad9-e511-a03b-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccactualinvoiceline" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreCCActualInvoiceLineUpdate" Description="Pre-Operation of CC Actual Invoice Line Update" FilteringAttributes="new_actualprice,new_actualquantity" Id="8b46dd86-7ad9-e511-a03b-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccactualinvoiceline" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_actualprice,new_actualquantity,new_actual_ax_dataareaid,new_actualtotalamount" EntityAlias="PreImage" Id="67358f3a-97dc-e511-a03b-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostCCServiceUnitSumOfEstimatedRevenueToSA" FriendlyName="PostCCServiceUnitSumOfEstimatedRevenueToSA" Name="ContractRelatedPlugins.Plugins.PostCCServiceUnitSumOfEstimatedRevenueToSA" Id="0c8ee9da-7ce7-e511-a03b-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PostCCServiceUnitSumOfEstimatedRevenueToSA">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostCCServiceUnitSumOfEstimatedRevenueToSAUpdate" Description="Post CCServiceUnit Sum Of EstimatedRevenue To SA Update" FilteringAttributes="transactioncurrencyid,new_estimatedrevenue,new_said,statecode" Id="0d8ee9da-7ce7-e511-a03b-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_said" EntityAlias="PostImage" Id="108ee9da-7ce7-e511-a03b-00155d098e01" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCServiceUnitSumOfEstimatedRevenueToSACreate" Description="Post CCServiceUnit Sum Of EstimatedRevenue To SA Create" Id="118ee9da-7ce7-e511-a03b-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_said" EntityAlias="PostImage" Id="148ee9da-7ce7-e511-a03b-00155d098e01" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCServiceUnitSumOfEstimatedRevenueToSADelete" Description="Post CCServiceUnit Sum Of EstimatedRevenue To SA Delete" Id="158ee9da-7ce7-e511-a03b-00155d098e01" MessageName="Delete" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_said" EntityAlias="PreImage" Id="188ee9da-7ce7-e511-a03b-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to DuplicateDetectionRetrieveMultiple" FriendlyName="DuplicateDetectionRetrieveMultiple" Name="ContractRelatedPlugins.Plugins.DuplicateDetectionRetrieveMultiple" Id="5dd5cdc9-0353-e611-8470-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.DuplicateDetectionRetrieveMultiple">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PosODuplicateDetectionRetrieveMultiple" Description="Pos-Operation of Duplicate Detection RetrieveMultiple" Id="64d5cdc9-0353-e611-8470-00155d098e01" MessageName="RetrieveMultiple" Mode="Synchronous" PrimaryEntityName="new_duplicatedetection" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreValidateCCIPJobCreateRefreshCurrentValues" FriendlyName="PreValidateCCIPJobCreateRefreshCurrentValues" Name="ContractRelatedPlugins.Plugins.PreValidateCCIPJobCreateRefreshCurrentValues" Id="21456411-bf76-e611-8910-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreValidateCCIPJobCreateRefreshCurrentValues">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreValidateCCIPJobCreateRefreshCurrentValues" Description="Pre-Validation of CC IP Job Create efresh Current Values" Id="22456411-bf76-e611-8910-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccipjob" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCIVRISKGenerateEILsJobUpdate" FriendlyName="PreCCIVRISKGenerateEILsJobUpdate" Name="ContractRelatedPlugins.Plugins.PreCCIVRISKGenerateEILsJobUpdate" Id="6a06f128-909f-e611-a75a-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCIVRISKGenerateEILsJobUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCIVRISKGenerateEILsJobUpdate" Description="Pre-Operation of CC IV RISK Generate EILs Job Update" FilteringAttributes="new_jobstatus" Id="6b06f128-909f-e611-a75a-00155d098e01" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccivriskgenerateeilsjob" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="6e06f128-909f-e611-a75a-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCInvoicePlanUpdate_DeleteFutureEILs" FriendlyName="PreCCInvoicePlanUpdate_DeleteFutureEILs" Name="ContractRelatedPlugins.Plugins.PreCCInvoicePlanUpdate_DeleteFutureEILs" Id="c9dbd63c-3fff-e611-a73a-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCInvoicePlanUpdate_DeleteFutureEILs">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanUpdate_DeleteFutureEILs" Description="Pre-Operation of CC Invoice Plan Update Delete Future EILs" FilteringAttributes="new_planstatus" Id="cadbd63c-3fff-e611-a73a-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_invoicingenddate,new_planstatus" EntityAlias="PreImage" Id="cddbd63c-3fff-e611-a73a-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCServiceUnitUpdate" FriendlyName="PreCCServiceUnitUpdate" Name="ContractRelatedPlugins.Plugins.PreCCServiceUnitUpdate" Id="20ec34b9-3c03-e711-a73a-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreCCServiceUnitUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCServiceUnitUpdate" Description="Pre-Operation of CC Service Unit Update" FilteringAttributes="new_service" Id="21ec34b9-3c03-e711-a73a-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_service" EntityAlias="PreImage" Id="24ec34b9-3c03-e711-a73a-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreValidateCCInvoicePlanComplete" FriendlyName="PreValidateCCInvoicePlanComplete" Name="ContractRelatedPlugins.Plugins.PreValidateCCInvoicePlanComplete" Id="77c04d6f-4019-e711-83e3-00155d098e01" TypeName="ContractRelatedPlugins.Plugins.PreValidateCCInvoicePlanComplete">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreValidateCCInvoicePlanComplete" Description="Pre-Validation of CC Invoice Plan Complete" FilteringAttributes="new_planstatus" Id="78c04d6f-4019-e711-83e3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="1" SecureConfiguration="" Stage="PreOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_planstatus,new_invoicemethod,new_serviceareafromsu,new_suid,new_commodity" EntityAlias="PreImage" Id="7bc04d6f-4019-e711-83e3-00155d098e01" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreSBPInvoiceTextTranslationDuplicationCheck" FriendlyName="PreSBPInvoiceTextTranslationDuplicationCheck" Name="ContractRelatedPlugins.Plugins.PreSBPInvoiceTextTranslationDuplicationCheck" Id="9c5a5904-1d0b-e811-a65b-00155d09729a" TypeName="ContractRelatedPlugins.Plugins.PreSBPInvoiceTextTranslationDuplicationCheck">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreSBPInvoiceTextTranslationDuplicationCheckC" Description="Pre-Operation of SBP Invoice Text Translation DuplicationCheck Create" Id="e14fb29a-1d0b-e811-a65b-00155d09729a" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_supplybillingproductinvoicetexttrans" Rank="1" SecureConfiguration="" Stage="PreOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreSBPInvoiceTextTranslationDuplicationCheckU" Description="Pre-Operation of SBP Invoice Text Translation DuplicationCheck Update" FilteringAttributes="new_country,new_supplybillingproduct" Id="e44fb29a-1d0b-e811-a65b-00155d09729a" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_supplybillingproductinvoicetexttrans" Rank="1" SecureConfiguration="" Stage="PreOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_country,new_supplybillingproduct" EntityAlias="PreImage" Id="36f6e72b-dae0-e711-96c3-00155d0974a9" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="CCInvoicePlanSupplyBillingBillingProductSet" FriendlyName="CCInvoicePlanSupplyBillingBillingProductSet" Name="ContractRelatedPlugins.Plugins.CCInvoicePlanSupplyBillingBillingProductSet" Id="2a8ef456-0f10-e811-a65b-00155d09729a" TypeName="ContractRelatedPlugins.Plugins.CCInvoicePlanSupplyBillingBillingProductSet">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanSupplyBillingBillingProductSetC" Description="Pre-Operation of CC Invoice Plan Supply Billing Billing Product Set Create" Id="2b8ef456-0f10-e811-a65b-00155d09729a" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="3" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreCCInvoicePlanSupplyBillingBillingProductSetU" Description="Pre-Operation of CC Invoice Plan Supply Billing Billing Product Set Updated" FilteringAttributes="new_billingproduct" Id="2e8ef456-0f10-e811-a65b-00155d09729a" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="3" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_billingproduct,new_invoicingstartdate,new_suid,new_feetype,new_feeincluded" EntityAlias="PreImage" Id="318ef456-0f10-e811-a65b-00155d09729a" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+            <Step CustomConfiguration="" Name="PostCCInvoicePlanSupplyBillingBillingProductSetC" Description="Post-Operation of CC Invoice Plan Supply Billing Billing Product Set Create" Id="d0abc5fa-6d11-e811-a65b-00155d09729a" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoiceplan" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_billingproduct,new_invoicingstartdate,new_suid" EntityAlias="PostImage" Id="d3abc5fa-6d11-e811-a65b-00155d09729a" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostSupplyBillingProductCreateAddLanguages" FriendlyName="PostSupplyBillingProductCreateAddLanguages" Name="ContractRelatedPlugins.Plugins.PostSupplyBillingProductCreateAddLanguages" Id="d68171c0-402c-e811-a693-00155d0972a9" TypeName="ContractRelatedPlugins.Plugins.PostSupplyBillingProductCreateAddLanguages">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostSupplyBillingProductCreateAddLanguages" Description="Post-Operation of Supply Billing Product Create Add Languages" Id="d78171c0-402c-e811-a693-00155d0972a9" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_supplybillingproduct" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_id" EntityAlias="PostImage" Id="da8171c0-402c-e811-a693-00155d0972a9" MessagePropertyName="id" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreSupplyBillingProductCreateSetID" FriendlyName="PreSupplyBillingProductCreateSetID" Name="ContractRelatedPlugins.Plugins.PreSupplyBillingProductCreateSetID" Id="cbcd18b4-de2c-e811-8cc8-00155d0972a9" TypeName="ContractRelatedPlugins.Plugins.PreSupplyBillingProductCreateSetID">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreSupplyBillingProductCreateSetID" Description="Pre-Operation of Supply Billing Product Create Set ID" Id="cccd18b4-de2c-e811-8cc8-00155d0972a9" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_supplybillingproduct" Rank="100000" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCInvoicingRiskVolumeUpdateSetApprover" FriendlyName="PreCCInvoicingRiskVolumeUpdateSetApprover" Name="ContractRelatedPlugins.Plugins.PreCCInvoicingRiskVolumeUpdateSetApprover" Id="64b61c4e-f14d-e811-857e-00155d0973c7" TypeName="ContractRelatedPlugins.Plugins.PreCCInvoicingRiskVolumeUpdateSetApprover">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCInvoicingRiskVolumeUpdateSetApprover" Description="Pre-Operation of CC Invoicing Risk Volume Update Set Approver" FilteringAttributes="new_volumestatus" Id="65b61c4e-f14d-e811-857e-00155d0973c7" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoicingvolumes_risk" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_approver,new_volumestatus" EntityAlias="PreImage" Id="68b61c4e-f14d-e811-857e-00155d0973c7" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheck" FriendlyName="PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheck" Name="ContractRelatedPlugins.Plugins.PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheck" Id="88c69908-0a59-e811-942b-00155d0972c1" TypeName="ContractRelatedPlugins.Plugins.PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheck">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheckC" Description="Pre-Validation of CC Invoice Price and Quantity Update UniqueStartDateCheckC" Id="89c69908-0a59-e811-942b-00155d0972c1" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccinvoicepriceandquantity" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreValidateCCInvoicePriceandQuantityUpdateUniqueStartDateCheckU" Description="Pre-Validation of CC Invoice Price and Quantity Update UniqueStartDateCheckU" FilteringAttributes="new_date,new_ipid" Id="8cc69908-0a59-e811-942b-00155d0972c1" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccinvoicepriceandquantity" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_ipid" EntityAlias="PreImage" Id="8fc69908-0a59-e811-942b-00155d0972c1" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCServiceUnitSetSystemClient" FriendlyName="PreCCServiceUnitSetSystemClient" Name="ContractRelatedPlugins.Plugins.PreCCServiceUnitSetSystemClient" Id="debac7ef-a46f-e811-942b-00155d0972c1" TypeName="ContractRelatedPlugins.Plugins.PreCCServiceUnitSetSystemClient">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCServiceUnitSetSystemClientC" Description="Pre-Operation of CC Service Unit SetSystemClientC" Id="dfbac7ef-a46f-e811-942b-00155d0972c1" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreCCServiceUnitSetSystemClientU" Description="Pre-Operation of CC Service Unit SetSystemClientU" Id="e2bac7ef-a46f-e811-942b-00155d0972c1" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccserviceunit" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="new_systemclient,new_subcompany,new_said" EntityAlias="PreImage" Id="e5bac7ef-a46f-e811-942b-00155d0972c1" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCManualInvoiceUpdateHandleEILAtCompleteReopen" FriendlyName="PreCCManualInvoiceUpdateHandleEILAtCompleteReopen" Name="ContractRelatedPlugins.Plugins.PreCCManualInvoiceUpdateHandleEILAtCompleteReopen" Id="cff31ad3-7c7b-e811-9c44-00155d0972c1" TypeName="ContractRelatedPlugins.Plugins.PreCCManualInvoiceUpdateHandleEILAtCompleteReopen">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCManualInvoiceUpdateHandleEILAtCompleteReopen" Description="Post-Operation of CC Manual Invoice Update HandleEILAtCompleteReopen" FilteringAttributes="new_invoicestatus" Id="d0f31ad3-7c7b-e811-9c44-00155d0972c1" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccpaymentschedules" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="d3f31ad3-7c7b-e811-9c44-00155d0972c1" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCFraBRInvoiceIPChanged Create And Update" FriendlyName="PreCCFraBRInvoiceIPChanged" Name="ContractRelatedPlugins.Plugins.PreCCFraBRInvoiceIPChanged" Id="31114f2d-c47b-e911-aeac-00155d0974fc" TypeName="ContractRelatedPlugins.Plugins.PreCCFraBRInvoiceIPChanged">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCFraBRInvoiceIPChangedCreate" Description="PreCCFraBRInvoiceIPChanged Create" Id="32114f2d-c47b-e911-aeac-00155d0974fc" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Create" Mode="Synchronous" PrimaryEntityName="new_ccfrabrinvoice" Rank="2" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+            <Step CustomConfiguration="" Name="PreCCFraBRInvoiceIPChangedUpdate" Description="PreCCFraBRInvoiceIPChanged Update" FilteringAttributes="new_ipid" Id="35114f2d-c47b-e911-aeac-00155d0974fc" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccfrabrinvoice" Rank="2" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="38114f2d-c47b-e911-aeac-00155d0974fc" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreCCFraBRInvoiceComplete Create And Update" FriendlyName="PreCCFraBRInvoiceComplete" Name="ContractRelatedPlugins.Plugins.PreCCFraBRInvoiceComplete" Id="679f2229-0986-e911-ad8f-00155d0974fc" TypeName="ContractRelatedPlugins.Plugins.PreCCFraBRInvoiceComplete">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreCCFraBRInvoiceComplete" Description="PreCCFraBRInvoiceComplete" FilteringAttributes="new_frabrstatus" Id="689f2229-0986-e911-ad8f-00155d0974fc" ImpersonatingUserId="7aaa3a60-bd8a-e011-adb3-00155d098e01" MessageName="Update" Mode="Synchronous" PrimaryEntityName="new_ccfrabrinvoice" Rank="2" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image EntityAlias="PreImage" Id="6b9f2229-0986-e911-ad8f-00155d0974fc" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+      </PluginTypes>
+    </Solution>
+    <Solution Assembly="ContractRelatedPlugins.Workflow.dll" Id="f5863564-63fd-e411-bbea-00155d098e01" IsolationMode="None" SourceType="Database">
+      <WorkflowTypes>
+        <WorkflowType FriendlyName="CCIVImport" Name="CCIVImport" Description="CCIVImport" WorkflowActivityGroupName="ContractRelated" Id="56e96e11-3c09-e511-bbea-00155d098e01" TypeName="ContractRelatedPlugins.Workflow.CCIVImport" />
+        <WorkflowType FriendlyName="CCEILGenerate" Name="CCEILGenerate" Description="CCEILGenerate" WorkflowActivityGroupName="ContractRelated" Id="d97452d8-4f16-e511-90f6-00155d098e01" TypeName="ContractRelatedPlugins.Workflow.CCEILGenerate" />
+        <WorkflowType FriendlyName="Wait" Name="Wait" Description="Wait" WorkflowActivityGroupName="ContractRelated" Id="8d88c9c0-629e-e511-84aa-00155d098e01" TypeName="ContractRelatedPlugins.Workflow.Wait" />
+      </WorkflowTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>
